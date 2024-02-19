@@ -4,19 +4,21 @@ import Header from '../Header/Header'
 import PersonalProjects from '../PersonalProjects/PersonalProjects'
 import WhoAmI from '../WhoAmI/WhoAmI'
 import Contact from '../Contact/Contact'
-import { useState } from 'react'
 import Footer from '../Footer/Footer'
+import { useState } from 'react'
 
 export default function Home(){
 
+    const [darkMode, setDarkMode] = useState(true)
+
     return (
         <>
-            <Header />
-            <FirstSection />
-            <PersonalProjects />
-            <WhoAmI />
-            <Contact />
-            <Footer />
+            <Header setDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} />
+            <FirstSection darkMode={darkMode} />
+            <PersonalProjects darkMode={darkMode} />
+            <WhoAmI darkMode={darkMode} />
+            <Contact darkMode={darkMode} />
+            <Footer darkMode={darkMode} />
         </>
     )
 }

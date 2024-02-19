@@ -8,9 +8,16 @@
     text-align: justify;
 }
 
+.whoAmIBottomDiv{
+    max-width: 400px;
+}
+
 @media (max-width: 790px) {
     .whoAmIImg{
         height: 400px;
+        width: 300px;
+    }
+    .whoAmIBottomDiv{
         width: 300px;
     }
 }

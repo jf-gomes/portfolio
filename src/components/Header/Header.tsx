@@ -2,19 +2,27 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Container from 'react-bootstrap/Container';
-import logo from '../../img/logo.jpg'
+import darkLogo from '../../img/logo.jpg'
+import lightLogo from '../../img/lightLogo.png'
 import './Header.css'
-import { FunctionComponent } from 'react';
+import Switch from 'react-switch';
+import { CiLight } from "react-icons/ci";
+import { CiDark } from "react-icons/ci";
 
-export default function Header() {
+type HeaderProps = {
+    setDarkMode: () => void
+    darkMode: boolean
+}
+
+export default function Header({ setDarkMode, darkMode }: HeaderProps) {
     return (
-        <header className='p-4'>
-            <Navbar key='md' expand='md' className='navbar'>
+        <header style={darkMode ? {backgroundColor: '#0D1B2A'} : {backgroundColor: '#E0E1DD'}} className='p-4'>
+            <Navbar style={darkMode ? {backgroundColor: '#0D1B2A'} : {backgroundColor: '#E0E1DD'}} key='md' expand='md' className='navbar'>
                 <Container fluid>
                     <Navbar.Brand href='#'>
-                        <img className='headerLogo' src={logo} alt="" />
+                        {darkMode ? <img className='headerLogo' src={darkLogo} alt="" /> : <img className='headerLogo' src={lightLogo} alt="" />}
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls='offcanvasNavbar-expand-md'></Navbar.Toggle>
+                    <Navbar.Toggle style={darkMode ? {backgroundColor: '#415A77'} : {backgroundColor: '#E0E1DD'}}aria-controls='offcanvasNavbar-expand-md'></Navbar.Toggle>
                     <Navbar.Offcanvas
                         id='offcanvasNavbar-expand-md'
                         aria-labelledby='offcanvasNavbarLabel-expand-md'
@@ -25,11 +33,12 @@ export default function Header() {
                                 João Gomes
                             </Offcanvas.Title>
                         </Offcanvas.Header>
-                        <Offcanvas.Body className='navbarOffcanvas'>
-                            <Nav className="justify-content-end flex-grow-1 pe-3">
-                                <Nav.Link className='navbarLink text-white' href='#personalProjectsSect'>Projetos</Nav.Link>
-                                <Nav.Link className='navbarLink text-white' href='#whoAmISect'>Sobre mim</Nav.Link>
-                                <Nav.Link className='navbarLink text-white' href='#'>Contato</Nav.Link>
+                        <Offcanvas.Body style={darkMode ? {backgroundColor: '#0D1B2A'} : {backgroundColor: '#E0E1DD'}}>
+                            <Nav style={darkMode ? {backgroundColor: '#0D1B2A'} : {backgroundColor: '#E0E1DD'}} className="justify-content-end align-items-center flex-grow-1 pe-3">
+                                <Switch onChange={setDarkMode} checked={darkMode} offColor='#0D1B2A' onColor='#E0E1DD' checkedIcon={<CiLight size={24} color='black' />} uncheckedIcon={<CiDark size={24} color='white' />} />
+                                <Nav.Link style={darkMode ? {color: 'white'} : {color: '#0D1B2A'}} className='navbarLink' href='#personalProjectsSect'>Projetos</Nav.Link>
+                                <Nav.Link style={darkMode ? {color: 'white'} : {color: '#0D1B2A'}} className='navbarLink' href='#whoAmISect'>Sobre mim</Nav.Link>
+                                <Nav.Link style={darkMode ? {color: 'white'} : {color: '#0D1B2A'}} className='navbarLink' href='#'>Contato</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

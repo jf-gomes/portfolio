@@ -1,4 +1,8 @@
 .contactIcon:hover{
     cursor: pointer;
-    color: #E0E1DD;
+    color: #778DA9;
+}
+
+.contactIconsDiv{
+    color: white;
 }

@@ -6,9 +6,13 @@ import mongodb from '../../img/mongodb.png'
 import ts from '../../img/ts.png'
 import './FirstSection.css'
 
-export default function FirstSection(){
+type FirstSectionProps = {
+    darkMode: boolean
+}
+
+export default function FirstSection({ darkMode }: FirstSectionProps){
     return (
-        <section id='sect1' className='d-flex flex-wrap justify-content-center align-items-center gap-4 text-white m-4'>
+        <section style={darkMode ? {backgroundColor: '#0D1B2A', color: 'white'} : {backgroundColor: '#E0E1DD', color: '#0D1B2A'}} id='sect1' className='d-flex flex-wrap justify-content-center align-items-center p-4 gap-4'>
             <img className='meImg' src={me} alt="João Gomes" />
             <div className='d-flex flex-column align-items-center gap-4'>
                 <div className='d-flex flex-column align-items-center'>
