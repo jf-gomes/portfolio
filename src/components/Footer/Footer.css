@@ -1,0 +1,9 @@
+footer{
+    background-color: #E0E1DD;
+    height: 50px;
+}
+
+footer p{
+    font-size: .8em;
+    margin: 0;
+}

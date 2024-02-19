@@ -1,0 +1,18 @@
+.personalProjectsImg{
+    width: 400px;
+    height: 400px;
+}
+
+.personalProjectRightDiv{
+    max-width: 300px;
+}
+
+@media (max-width: 790px) {
+    .personalProjectsImg{
+        width: 250px;
+        height: 250px;
+    }
+    .personalProjectRightDiv{
+        width: 250px;
+    }
+}

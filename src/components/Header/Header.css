@@ -1,0 +1,12 @@
+.navbar, .navbarOffcanvas{
+    background-color: #0D1B2A;
+}
+
+.headerLogo{
+    width: 100px;
+    height: 100px;
+}
+
+.navbarLink:hover{
+    text-decoration: underline;
+}

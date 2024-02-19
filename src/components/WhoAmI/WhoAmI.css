@@ -1,0 +1,16 @@
+.whoAmIImg{
+    height: 500px;
+    width: 400px;
+}
+
+.whoAmILeftDiv{
+    max-width: 400px;
+    text-align: justify;
+}
+
+@media (max-width: 790px) {
+    .whoAmIImg{
+        height: 400px;
+        width: 300px;
+    }
+}
