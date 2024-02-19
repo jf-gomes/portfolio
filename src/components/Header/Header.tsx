@@ -38,7 +38,7 @@ export default function Header({ setDarkMode, darkMode }: HeaderProps) {
                                 <Switch onChange={setDarkMode} checked={darkMode} offColor='#0D1B2A' onColor='#E0E1DD' checkedIcon={<CiLight size={24} color='black' />} uncheckedIcon={<CiDark size={24} color='white' />} />
                                 <Nav.Link style={darkMode ? {color: 'white'} : {color: '#0D1B2A'}} className='navbarLink' href='#personalProjectsSect'>Projetos</Nav.Link>
                                 <Nav.Link style={darkMode ? {color: 'white'} : {color: '#0D1B2A'}} className='navbarLink' href='#whoAmISect'>Sobre mim</Nav.Link>
-                                <Nav.Link style={darkMode ? {color: 'white'} : {color: '#0D1B2A'}} className='navbarLink' href='#'>Contato</Nav.Link>
+                                <Nav.Link style={darkMode ? {color: 'white'} : {color: '#0D1B2A'}} className='navbarLink' href='#contactSect'>Contato</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

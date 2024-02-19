@@ -1,6 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import './Contact.css'
+import MessageForm from "../MessageForm/MessageForm";
 
 type ContactProps = {
     darkMode: boolean
@@ -8,6 +9,7 @@ type ContactProps = {
 
 export default function Contact({ darkMode }: ContactProps){
     return(
+        <>
         <section style={darkMode ? {backgroundColor: '#0D1B2A', color: 'white'} : {backgroundColor: '#E0E1DD', color: '#0D1B2A'}} id="contactSect" className="d-flex flex-column align-items-center gap-4">
             <h3 className="p-4">Entre em contato</h3>
             <div className="contactIconsDiv d-flex gap-4">
@@ -19,6 +21,9 @@ export default function Contact({ darkMode }: ContactProps){
                 </a>
             </div>
             <p>jf.gomes458@gmail.com</p>
+            <p className="fs-5">Ou se preferir, <span>envie-me uma mensagem:</span></p>
+            <MessageForm darkMode={darkMode} />
         </section>
+        </>
     )
 }
