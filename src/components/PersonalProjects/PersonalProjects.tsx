@@ -1,4 +1,7 @@
 import './PersonalProjects.css'
+import { useLayoutEffect } from 'react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 type PersonalProjectsProps = {
     darkMode: boolean
@@ -30,11 +33,23 @@ export default function PersonalProjects({ darkMode }: PersonalProjectsProps){
         }
     ]
 
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.to('.personalProjectContainer', {
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+                trigger: '#personalProjectsSect',
+                start: 'top 500px'
+            }
+        })
+    }, [])
+
     return (
         <section style={darkMode ? {backgroundColor: '#0D1B2A', color: 'white'} : {backgroundColor: '#E0E1DD', color: '#0D1B2A'}} id='personalProjectsSect' className='d-flex flex-column justify-content-center align-items-center p-4 gap-4'>
             <h2 className='p-4'>Projetos pessoais</h2>
             {personalProjectsData.map((project) => (
-                <div key={project.id} className='d-flex flex-wrap justify-content-center gap-4'>
+                <div key={project.id} className='personalProjectContainer d-flex flex-wrap justify-content-center gap-4'>
                     <img className='personalProjectsImg' src={project.img} alt={project.title} />
                     <div className='personalProjectRightDiv d-flex flex-column'>
                         <h3>{project.title}</h3>

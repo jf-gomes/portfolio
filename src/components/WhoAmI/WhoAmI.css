@@ -2,21 +2,28 @@
     height: 400px;
     width: 400px;
     border-radius: 50%;
+    opacity: 0;
 }
 
 .whoAmILeftDiv{
     max-width: 400px;
     text-align: justify;
+    transform: translate(0, 1000px);
 }
 
 .whoAmIBottomDiv{
     max-width: 400px;
 }
 
+.toolsAndSkillsDiv{
+    transform: translate(0, 700px);
+    opacity: 0;
+}
+
 @media (max-width: 790px) {
     .whoAmIImg{
-        height: 400px;
-        width: 300px;
+        height: 300px;
+        width: 280px;
     }
     .whoAmIBottomDiv{
         width: 300px;

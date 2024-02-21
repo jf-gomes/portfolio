@@ -5,6 +5,11 @@
 .meImg{
     width: 500px;
     height: 520px;
+    opacity: 0;
+}
+
+.sect1RightDiv{
+    opacity: 0;
 }
 
 .sect1Icon{

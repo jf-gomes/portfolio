@@ -21,7 +21,7 @@ export default function Contact({ darkMode }: ContactProps){
                 </a>
             </div>
             <p>jf.gomes458@gmail.com</p>
-            <p className="fs-5">Ou se preferir, <span>envie-me uma mensagem:</span></p>
+            <p className="fs-5 text-center">Ou se preferir, <span>envie-me uma mensagem:</span></p>
             <MessageForm darkMode={darkMode} />
         </section>
         </>
