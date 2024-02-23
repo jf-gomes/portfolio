@@ -32,7 +32,7 @@ export default function WhoAmI({ darkMode }: WhoAmIProps){
             opacity: 1,
             scrollTrigger: {
                 trigger: '#whoAmISect',
-                start: 'top top'
+                start: 'bottom bottom'
             }
         })
     }, [])

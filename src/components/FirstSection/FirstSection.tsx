@@ -5,9 +5,7 @@ import nodejs from '../../img/nodejs.png'
 import mongodb from '../../img/mongodb.png'
 import ts from '../../img/ts.png'
 import './FirstSection.css'
-import { useState, useEffect, useLayoutEffect } from 'react'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useState, useEffect } from 'react'
 
 type FirstSectionProps = {
     darkMode: boolean
@@ -28,22 +26,12 @@ export default function FirstSection({ darkMode }: FirstSectionProps){
         }
     }, [])
 
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
-        gsap.to('.meImg', {
-            opacity: 1
-        })
-        gsap.to('.sect1RightDiv', {
-            opacity: 1
-        })
-    }, [])
-
     return (
         <section style={darkMode ? {backgroundColor: '#0D1B2A', color: 'white'} : {backgroundColor: '#E0E1DD', color: '#0D1B2A'}} id='sect1' className=''>
             {size > 790 ? 
             <div style={darkMode ? {backgroundColor: '#1B263B'} : {backgroundColor: 'white'}} className='sect1Container d-flex align-items-center justify-content-center gap-4'>
             <img className='meImg' src={meNoBg} alt="João Gomes" />
-            <div className='sect1RightDiv'>
+            <div>
                 <h1>João Gomes</h1>
                 <h2>Software Engineer</h2>
                 <p className='fs-5'>Desenvolvedor web e mobile fullstack.</p>
