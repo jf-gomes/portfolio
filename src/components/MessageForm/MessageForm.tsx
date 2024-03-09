@@ -1,5 +1,5 @@
 import './MessageForm.css'
-import { useState } from 'react'
+import { EventHandler, FormEvent, useState } from 'react'
 import { api } from '../../services/api'
 import Loader from '../Loader/Loader'
 
@@ -15,7 +15,7 @@ export default function MessageForm({ darkMode }: MessageFormProps){
     const [loader, setLoader] = useState<boolean>(false)
     const [toggleConfirmation, setToggleConfirmation] = useState<boolean>(false)
 
-    async function handleSubmit(e: any){
+    async function handleSubmit(e: FormEvent){
         e.preventDefault()
         setToggleConfirmation(false)
         if (!name || !email || !content){

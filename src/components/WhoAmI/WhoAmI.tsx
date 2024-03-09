@@ -42,19 +42,20 @@ export default function WhoAmI({ darkMode }: WhoAmIProps){
             <h2 className='p-4'>Quem sou eu</h2>
             <div className='d-flex flex-wrap justify-content-center align-items-center gap-4'>
                 <div className='whoAmILeftDiv d-flex flex-column fs-5'>
-                    <p>Olá! Meu nome é João Víctor Feitosa Gomes e sou <span>engenheiro de software</span>. Meu objetivo é fornecer às empresas para as quais trabalho, a oportunidade de executar seus processos de forma mais eficiente, por meio da utilização de softwares adequados desenvolvidos de forma profissional.</p>
-                    <p>Atualmente tenho focado meu trabalho no desenvolvimento <span>web e mobile</span>, atuando tanto no front, como no back. Possuo experiência com manutenção de sistemas e apoio técnico em organizações do setor público, além de prestar serviços de desenvolvimento web como freelancer. Sou estudante de <span>Análise e Desenvolvimento de Sistemas</span>, graduado em Administração e Pós-Graduado em <span>Redes de Computadores</span>.</p>
+                    <p>Olá! Meu nome é João Gomes e sou <span>desenvolvedor web</span>. Como programador, meu objetivo é desenvolver sistemas otimizados, dinâmicos, expansivos e intuitivos.</p>
+                    <p>Possuo experiência com manutenção de sites, banco de dados e suporte técnico em organizações do setor público, além de prestar serviços de desenvolvimento web como freelancer.</p>
+                    <p>Sou estudante de <span>Análise e Desenvolvimento de Sistemas</span>, graduado em Administração e Pós-Graduado em <span>Redes de Computadores</span>.</p>
                 </div>
                 <img className='whoAmIImg' src={me} alt="João Gomes" />
             </div>
             <div style={{margin: '6rem'}} className='toolsAndSkillsDiv d-flex flex-wrap justify-content-center gap-4'>
                 <div className='whoAmIBottomDiv d-flex flex-column align-items-center'>
                     <h3>Tecnologias utilizadas</h3>
-                    <p className='fs-5'>JavaScript / TypeScript / React / React Native / NodeJS / MongoDB / API REST</p>
+                    <p className='fs-5'>JavaScript / TypeScript / React / NodeJS / Express / Redux / MongoDB / API REST</p>
                 </div>
                 <div className='whoAmIBottomDiv d-flex flex-column align-items-center'>
                     <h3>Habilidades</h3>
-                    <p className='fs-5'>Landing pages / Sistemas web / Aplicativos / Fullstack</p>
+                    <p className='fs-5'>Landing pages / Sistemas web / Componentização / Requisições HTTP / Banco de dados / CSS frameworks</p>
                 </div>
             </div>
         </section>

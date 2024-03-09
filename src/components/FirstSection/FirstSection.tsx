@@ -33,8 +33,7 @@ export default function FirstSection({ darkMode }: FirstSectionProps){
             <img className='meImg' src={meNoBg} alt="João Gomes" />
             <div>
                 <h1>João Gomes</h1>
-                <h2>Software Engineer</h2>
-                <p className='fs-5'>Desenvolvedor web e mobile fullstack.</p>
+                <h2>Desenvolvedor web</h2>
                 <div className='d-flex gap-4'>
                     <img className='sect1Icon' src={js} alt="JavaScript" />
                     <img className='sect1Icon' src={ts} alt="TypeScript" />
