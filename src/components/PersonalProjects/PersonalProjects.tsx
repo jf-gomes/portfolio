@@ -92,7 +92,7 @@ export default function PersonalProjects({ darkMode }: PersonalProjectsProps){
                                 <li>{t}</li>
                             ))}
                         </ul>
-                        <a href={project.deploy} target='_blank'><button className='defaultBtn'>{project.deploy ? 'Acessar projeto' : 'Acessar repositório'}</button></a>
+                        <a href={project.deploy ? project.deploy : project.repo} target='_blank'><button className='defaultBtn'>{project.deploy ? 'Acessar projeto' : 'Acessar repositório'}</button></a>
                     </div>
                 </div>
             ))}
