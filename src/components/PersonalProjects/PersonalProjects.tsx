@@ -44,7 +44,7 @@ export default function PersonalProjects({ darkMode }: PersonalProjectsProps){
             title: 'NorteCon',
             description: 'Site para uma empresa de consórcios de Porto Velho, Rondônia.',
             img: 'https://i.imgur.com/GkJnlEZ.png',
-            deploy: 'https://jf-gomes.github.io/nortecon',
+            deploy: 'https://nortecon.com.br/',
             functions: ['Simular crédito'],
             technologies: ['JAVASCRIPT', 'REACT', 'BOOTSTRAP']
         },
