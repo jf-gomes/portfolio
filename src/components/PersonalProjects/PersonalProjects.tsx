@@ -2,6 +2,15 @@ import './PersonalProjects.css'
 import { useLayoutEffect } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import js from '../../img/js.png'
+import react from '../../img/react.png'
+import nodejs from '../../img/nodejs.png'
+import mongodb from '../../img/mongodb.png'
+import ts from '../../img/ts.png'
+import mysql from '../../img/mysql.png'
+import redux from '../../img/redux.png'
+import bootstrap from '../../img/bootstrap.png'
+import tailwind from '../../img/tailwind.png'
 
 type PersonalProjectsProps = {
     darkMode: boolean
@@ -28,7 +37,7 @@ export default function PersonalProjects({ darkMode }: PersonalProjectsProps){
             img: 'https://i.imgur.com/kbsda7s.jpg',
             repo: 'https://github.com/jf-gomes/proflyte-frontend',
             functions: ['Ver notícias', 'Cadastrar conta', 'Login com autenticação JWT', 'Ver perfis de usuários'],
-            technologies: ['TYPESCRIPT', 'REACT', 'NODE', 'API', 'EXPRESS', 'MONGODB', 'REDUX', 'TAILWIND']
+            technologies: [ts, react, nodejs, mongodb, redux, tailwind]
         },
         {
             id: '1',
@@ -37,7 +46,7 @@ export default function PersonalProjects({ darkMode }: PersonalProjectsProps){
             img: 'https://i.imgur.com/k9FDJNO.png',
             deploy: 'https://jf-gomes.github.io/zesty-frontend',
             functions: ['Cadastrar conta', 'Login com autenticação JWT', 'Criar projetos', 'Convidar colegas', 'Criar e atribuir tarefas', 'Enviar e receber mensagens'],
-            technologies: ['JAVASCRIPT', 'REACT', 'NODE', 'API', 'EXPRESS', 'MONGODB']
+            technologies: [js, react, nodejs, mongodb]
         },
         {
             id: '2',
@@ -46,7 +55,7 @@ export default function PersonalProjects({ darkMode }: PersonalProjectsProps){
             img: 'https://i.imgur.com/GkJnlEZ.png',
             deploy: 'https://nortecon.com.br/',
             functions: ['Simular crédito'],
-            technologies: ['JAVASCRIPT', 'REACT', 'BOOTSTRAP']
+            technologies: [ts, react, bootstrap, mysql]
         },
         {
             id: '3',
@@ -55,7 +64,7 @@ export default function PersonalProjects({ darkMode }: PersonalProjectsProps){
             img: 'https://i.imgur.com/ED3YYbK.jpg',
             deploy: 'https://jf-gomes.github.io/gather-sphere-frontend',
             functions: ['Cadastrar conta', 'Login com autenticação JWT', 'Ver eventos', 'Realizar inscrição em um evento', 'Cancelar a inscrição em um evento', 'Editar cadastro'],
-            technologies: ['JAVASCRIPT', 'REACT', 'NODE', 'API', 'EXPRESS', 'MONGODB']
+            technologies: [js, react, nodejs, mongodb]
         }
     ]
 
@@ -87,11 +96,11 @@ export default function PersonalProjects({ darkMode }: PersonalProjectsProps){
                             ))}
                         </ul>
                         <h4 className='fs-6'>Tecnologias utilizadas</h4>
-                        <ul>
+                        <div className='technologiesDiv d-flex'>
                             {project.technologies.map((t) => (
-                                <li>{t}</li>
+                                <img src={t} className='projectTechnologyImg' />
                             ))}
-                        </ul>
+                        </div>
                         <a href={project.deploy ? project.deploy : project.repo} target='_blank'><button className='defaultBtn'>{project.deploy ? 'Acessar projeto' : 'Acessar repositório'}</button></a>
                     </div>
                 </div>

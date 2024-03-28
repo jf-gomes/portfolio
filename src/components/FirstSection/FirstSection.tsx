@@ -4,6 +4,7 @@ import react from '../../img/react.png'
 import nodejs from '../../img/nodejs.png'
 import mongodb from '../../img/mongodb.png'
 import ts from '../../img/ts.png'
+import mysql from '../../img/mysql.png'
 import './FirstSection.css'
 import { useState, useEffect } from 'react'
 
@@ -35,11 +36,11 @@ export default function FirstSection({ darkMode }: FirstSectionProps){
                 <h1>João Gomes</h1>
                 <h2>Desenvolvedor web</h2>
                 <div className='d-flex gap-4'>
-                    <img className='sect1Icon' src={js} alt="JavaScript" />
                     <img className='sect1Icon' src={ts} alt="TypeScript" />
-                    <img className='sect1Icon' src={react} alt="JavaScript" />
-                    <img className='sect1Icon' src={nodejs} alt="JavaScript" />
-                    <img className='sect1Icon' src={mongodb} alt="JavaScript" />
+                    <img className='sect1Icon' src={react} alt="React" />
+                    <img className='sect1Icon' src={nodejs} alt="NodeJS" />
+                    <img className='sect1Icon' src={mongodb} alt="MongoDB" />
+                    <img className='sect1Icon' src={mysql} alt="MySQL" />
                 </div>
             </div>
             </div>
